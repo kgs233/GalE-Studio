@@ -1,6 +1,6 @@
-﻿namespace GalE
+﻿namespace GalE_Studio
 {
-    partial class Form2
+    partial class NewPrject
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "浏览";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // textBox1
             // 
@@ -86,9 +86,9 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "创建项目";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // Form2
+            // NewPrject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,8 +99,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "NewPrject";
+            this.Text = "新建项目";
             this.ResumeLayout(false);
             this.PerformLayout();
 

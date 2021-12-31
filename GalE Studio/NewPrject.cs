@@ -9,27 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace GalE
+namespace GalE_Studio
 {
-    public partial class Form2 : Form
+    public partial class NewPrject : Form
     {
-        string defaultPath = "";
-        public Form2()
+        public NewPrject()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new()
             {
                 Description = "请选择项目目录"
             };
             dialog.ShowNewFolderButton = false;
-            if (defaultPath != "")
+            if (MainUI.defaultPath != "")
             {
                 //设置此次默认目录为上一次选中目录  
-                dialog.SelectedPath = defaultPath;
+                dialog.SelectedPath = MainUI.defaultPath;
             }
 
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -41,17 +40,24 @@ namespace GalE
                 }
                 else
                 {
+                    MainUI.defaultPath = dialog.SelectedPath;
                     textBox2.Text = dialog.SelectedPath;
                 }
             }
-            defaultPath = dialog.SelectedPath;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private async void Button2_Click(object sender, EventArgs e)
         {
             string path = textBox2.Text;
             if (Directory.Exists(path))
             {
+                string[] information =
+                {
+                    "GalE Prject File",
+                    "Studio Version = " + MainUI.studioVersion,
+                    "GalE Version = " + MainUI.GalEVersion,
+                    "Prject name = " + textBox1.Text
+                };
                 path += textBox1.Text + "\\";
                 Directory.CreateDirectory(path);
                 Directory.CreateDirectory(path + "UI");
@@ -60,8 +66,11 @@ namespace GalE
                 Directory.CreateDirectory(path + "cg");
                 Directory.CreateDirectory(path + "UI");
                 File.CreateText(path + "script.ges");
-                File.CreateText(path + "people.gepl");
-                File.CreateText(path + textBox1.Text + ".redom");
+                File.CreateText(path + "people.gep");
+                await File.WriteAllLinesAsync(path + textBox1.Text + ".prject", information);
+                MainUI.main.Text = "GalE studio - " + textBox1.Text;
+                MainUI.main.listBox1.Show();
+                MainUI.main.richTextBox1.Show();
                 Close();
             }
             else

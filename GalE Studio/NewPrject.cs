@@ -61,16 +61,20 @@ namespace GalE_Studio
                 path += textBox1.Text + "\\";
                 Directory.CreateDirectory(path);
                 Directory.CreateDirectory(path + "UI");
-                Directory.CreateDirectory(path + "music");
-                Directory.CreateDirectory(path + "video");
-                Directory.CreateDirectory(path + "cg");
+                Directory.CreateDirectory(path + "Music");
+                Directory.CreateDirectory(path + "Video");
+                Directory.CreateDirectory(path + "CG");
+                Directory.CreateDirectory(path + "PeopleCG\\supporting");
                 Directory.CreateDirectory(path + "UI");
-                File.CreateText(path + "script.ges");
+                File.CreateText(path + "Line.ges");
                 File.CreateText(path + "people.gep");
                 await File.WriteAllLinesAsync(path + textBox1.Text + ".prject", information);
                 MainUI.main.Text = "GalE studio - " + textBox1.Text;
-                MainUI.main.listBox1.Show();
-                MainUI.main.richTextBox1.Show();
+                MainUI.nowPrjectPath = path;
+                MainUI.nowPrjectName = textBox2.Text;
+                MainUI.toolStripSplitButton2.Enabled = true;
+                MainUI.listBox1.Show();
+                MainUI.richTextBox1.Show();
                 Close();
             }
             else

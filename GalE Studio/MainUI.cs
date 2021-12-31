@@ -18,6 +18,7 @@ namespace GalE_Studio
     public partial class MainUI : Form
     {
         public static string nowPrjectName = "";
+        public static string nowPrjectPath = "";
         public static string defaultPath = "";
         public static string studioVersion = "1.0 Debug";
         public static string GalEVersion = "1.0 Beta";
@@ -53,7 +54,7 @@ namespace GalE_Studio
 
         private void 打开项目ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string Version = "";
+            string Version;
             OpenFileDialog openFileDialog = new()
             {
                 Filter = "项目文件 (*.prject)|*.prject"
@@ -77,6 +78,11 @@ namespace GalE_Studio
                             Text = "GalE studio - " + lines[3].Split(" = ")[1];
                             listBox1.Show();
                             richTextBox1.Show();
+                            MainUI.toolStripSplitButton2.Enabled = true;
+#pragma warning disable CS8601 // 引用类型赋值可能为 null。
+                            nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName);
+#pragma warning restore CS8601 // 引用类型赋值可能为 null。
+                            nowPrjectName = lines[3].Split(" = ")[1];
                         }
                     }
                     else
@@ -84,9 +90,20 @@ namespace GalE_Studio
                         Text = "GalE studio - " + lines[3].Split(" = ")[1];
                         listBox1.Show();
                         richTextBox1.Show();
+                        MainUI.toolStripSplitButton2.Enabled = true;
+#pragma warning disable CS8601 // 引用类型赋值可能为 null。
+                        nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName);
+#pragma warning restore CS8601 // 引用类型赋值可能为 null。
+                        nowPrjectName = lines[3].Split(" = ")[1];
                     }
                 }
             }
+        }
+
+        private void 添加人物ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPeople addPeople = new();
+            addPeople.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GalE_Studio
 {
-    partial class MainUI
+    public partial class MainUI
     {
         /// <summary>
         ///  Required designer variable.
@@ -33,14 +33,14 @@
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.新建项目ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开项目ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
+            toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.项目信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加人物ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
             this.项目地址ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            richTextBox1 = new System.Windows.Forms.RichTextBox();
+            listBox1 = new System.Windows.Forms.ListBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSplitButton1,
-            this.toolStripSplitButton2,
+            toolStripSplitButton2,
             this.toolStripSplitButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -84,28 +84,30 @@
             // 
             // toolStripSplitButton2
             // 
-            this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.项目信息ToolStripMenuItem,
             this.添加人物ToolStripMenuItem});
-            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
-            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(48, 22);
-            this.toolStripSplitButton2.Text = "项目";
-            this.toolStripSplitButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            toolStripSplitButton2.Enabled = false;
+            toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
+            toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            toolStripSplitButton2.Name = "toolStripSplitButton2";
+            toolStripSplitButton2.Size = new System.Drawing.Size(48, 22);
+            toolStripSplitButton2.Text = "项目";
+            toolStripSplitButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // 项目信息ToolStripMenuItem
             // 
             this.项目信息ToolStripMenuItem.Name = "项目信息ToolStripMenuItem";
-            this.项目信息ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.项目信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.项目信息ToolStripMenuItem.Text = "项目信息";
             // 
             // 添加人物ToolStripMenuItem
             // 
             this.添加人物ToolStripMenuItem.Name = "添加人物ToolStripMenuItem";
-            this.添加人物ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.添加人物ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.添加人物ToolStripMenuItem.Text = "添加人物";
+            this.添加人物ToolStripMenuItem.Click += new System.EventHandler(this.添加人物ToolStripMenuItem_Click);
             // 
             // toolStripSplitButton3
             // 
@@ -135,28 +137,28 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(153, 28);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(908, 441);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            richTextBox1.Location = new System.Drawing.Point(153, 28);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new System.Drawing.Size(908, 441);
+            richTextBox1.TabIndex = 1;
+            richTextBox1.Text = "";
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(153, 475);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(908, 123);
-            this.listBox1.TabIndex = 2;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 17;
+            listBox1.Location = new System.Drawing.Point(153, 475);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new System.Drawing.Size(908, 123);
+            listBox1.TabIndex = 2;
             // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 612);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(listBox1);
+            this.Controls.Add(richTextBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MainUI";
             this.Text = "GalE Studio";
@@ -173,14 +175,14 @@
         private ToolStrip toolStrip1;
         private ToolStripSplitButton toolStripSplitButton1;
         private ToolStripMenuItem 新建项目ToolStripMenuItem;
-        private ToolStripSplitButton toolStripSplitButton2;
+        public static ToolStripSplitButton toolStripSplitButton2;
         private ToolStripSplitButton toolStripSplitButton3;
         private ToolStripMenuItem 关于ToolStripMenuItem;
         private ToolStripMenuItem 项目地址ToolStripMenuItem;
         private ToolStripMenuItem 打开项目ToolStripMenuItem;
         private ToolStripMenuItem 项目信息ToolStripMenuItem;
         private ToolStripMenuItem 添加人物ToolStripMenuItem;
-        public RichTextBox richTextBox1;
-        public ListBox listBox1;
+        public static RichTextBox richTextBox1;
+        public static ListBox listBox1;
     }
 }

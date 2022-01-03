@@ -81,6 +81,7 @@ namespace GalE_Studio
             {
                 MessageBox.Show("路径无效","错误");
             }
+            return;
         }
     }
 }

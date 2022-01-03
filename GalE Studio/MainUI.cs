@@ -79,9 +79,7 @@ namespace GalE_Studio
                             listBox1.Show();
                             richTextBox1.Show();
                             MainUI.toolStripSplitButton2.Enabled = true;
-#pragma warning disable CS8601 // 引用类型赋值可能为 null。
-                            nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName);
-#pragma warning restore CS8601 // 引用类型赋值可能为 null。
+                            nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName) + "\\";
                             nowPrjectName = lines[3].Split(" = ")[1];
                         }
                     }
@@ -91,9 +89,7 @@ namespace GalE_Studio
                         listBox1.Show();
                         richTextBox1.Show();
                         MainUI.toolStripSplitButton2.Enabled = true;
-#pragma warning disable CS8601 // 引用类型赋值可能为 null。
-                        nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName);
-#pragma warning restore CS8601 // 引用类型赋值可能为 null。
+                        nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName) + "\\";
                         nowPrjectName = lines[3].Split(" = ")[1];
                     }
                 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /// <summary>
-/// 添加人物,还未完成
+/// 添加人物,创建项目时不行
 /// </summary>
 
 namespace GalE_Studio
@@ -35,7 +35,7 @@ namespace GalE_Studio
                 }
                 else
                 {
-                    StreamWriter file = new(MainUI.nowPrjectPath + "\\people.gep", append: true);
+                    using StreamWriter file = new(MainUI.nowPrjectPath + "people.gep", append: true);
                     switch (comboBox1.Text)
                     {
                         case "主角":
@@ -43,7 +43,7 @@ namespace GalE_Studio
                             break;
                         case "线路主角":
                             await file.WriteLineAsync(textBox1.Text + ',' + textBox2.Text + ",linemain");
-                            Directory.CreateDirectory(MainUI.nowPrjectPath + "PeopleCG\\" + textBox2);
+                            Directory.CreateDirectory(MainUI.nowPrjectPath + "PeopleCG\\" + textBox2.Text);
                             break;
                         case "配角":
                             await file.WriteLineAsync(textBox1.Text + ',' + textBox2.Text + ",supporting");

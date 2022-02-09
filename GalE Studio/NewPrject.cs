@@ -17,7 +17,6 @@ namespace GalE_Studio
         {
             InitializeComponent();
         }
-
         private void Button1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new()
@@ -66,15 +65,16 @@ namespace GalE_Studio
                 Directory.CreateDirectory(path + "CG");
                 Directory.CreateDirectory(path + "PeopleCG\\supporting");
                 Directory.CreateDirectory(path + "UI");
+                Directory.CreateDirectory(path + "Build");
                 File.CreateText(path + "Line.ges");
                 File.CreateText(path + "people.gep");
                 await File.WriteAllLinesAsync(path + textBox1.Text + ".prject", information);
                 MainUI.main.Text = "GalE studio - " + textBox1.Text;
                 MainUI.nowPrjectPath = path;
                 MainUI.nowPrjectName = textBox2.Text;
-                MainUI.toolStripSplitButton2.Enabled = true;
-                MainUI.listBox1.Show();
-                MainUI.richTextBox1.Show();
+                MainUI.main.toolStripSplitButton2.Enabled = true;
+                MainUI.main.listBox1.Show();
+                MainUI.main.richTextBox1.Show();
                 Close();
             }
             else

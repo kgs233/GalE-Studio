@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Compression;
 
 /// <summary>
 /// 主界面UI
@@ -78,7 +79,7 @@ namespace GalE_Studio
                             Text = "GalE studio - " + lines[3].Split(" = ")[1];
                             listBox1.Show();
                             richTextBox1.Show();
-                            MainUI.toolStripSplitButton2.Enabled = true;
+                            toolStripSplitButton2.Enabled = true;
                             nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName) + "\\";
                             nowPrjectName = lines[3].Split(" = ")[1];
                         }
@@ -88,7 +89,7 @@ namespace GalE_Studio
                         Text = "GalE studio - " + lines[3].Split(" = ")[1];
                         listBox1.Show();
                         richTextBox1.Show();
-                        MainUI.toolStripSplitButton2.Enabled = true;
+                        toolStripSplitButton2.Enabled = true;
                         nowPrjectPath = Path.GetDirectoryName(openFileDialog.FileName) + "\\";
                         nowPrjectName = lines[3].Split(" = ")[1];
                     }
@@ -100,6 +101,11 @@ namespace GalE_Studio
         {
             AddPeople addPeople = new();
             addPeople.Show();
+        }
+
+        private void 打包项目ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

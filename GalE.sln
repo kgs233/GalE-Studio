@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalE Studio", "GalE Studio\GalE Studio.csproj", "{FE804FBF-AAE4-43FB-B410-617E773D6AC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalE Core", "GalE Core\GalE Core.csproj", "{F80B8779-944F-4D34-A28F-AD26A4E959AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalE Core", "GalE Core\GalE Core.csproj", "{F80B8779-944F-4D34-A28F-AD26A4E959AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalE Run on Windows", "GalE Run\GalE Run on Windows.csproj", "{CEF5DD52-BC62-4809-AD4F-110D205707E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F80B8779-944F-4D34-A28F-AD26A4E959AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80B8779-944F-4D34-A28F-AD26A4E959AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80B8779-944F-4D34-A28F-AD26A4E959AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF5DD52-BC62-4809-AD4F-110D205707E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF5DD52-BC62-4809-AD4F-110D205707E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF5DD52-BC62-4809-AD4F-110D205707E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF5DD52-BC62-4809-AD4F-110D205707E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

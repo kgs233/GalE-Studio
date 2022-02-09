@@ -4,8 +4,11 @@ using System.Text;
 
 namespace GalE_Core
 {
-    internal interface InterfaceFormBuild
+    internal class CG
     {
-        public void build();
+        CG()
+        {
+
+        }
     }
 }

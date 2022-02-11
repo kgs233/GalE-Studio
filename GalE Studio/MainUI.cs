@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO.Compression;
+using System.IO;
 
 /// <summary>
 /// Ö÷½çÃæUI

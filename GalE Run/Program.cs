@@ -1,5 +1,4 @@
-﻿using System;
-using GalE_Core;
+﻿using GalE_Core;
 
 namespace GalE_Run
 {
@@ -7,7 +6,7 @@ namespace GalE_Run
     {
         static void Main()
         {
-            GameForm gameForm = new GameForm(800, 600, "test");
+            GameForm gameForm = new GameForm(1920, 1080, "test");
         }
     }
 }
